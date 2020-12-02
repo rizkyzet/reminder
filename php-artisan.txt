@@ -1,0 +1,112 @@
+//membuat controller beserta methodnya sekaligus model yang saling terhubung
+php artisan make:controller [NamaController] -r -m [Namamodel]
+
+//mengetahui command apa saja yang ada di controller
+php artisan help make:controller
+
+
+//clear cache
+php artisan config:cache
+php artisan config:clear
+composer dump-autoload -o
+
+
+//create factory
+>>> $model = App\Article::class;
+=> "App\Article"
+>>> factory($model,5)->create();
+
+//composer make auth laravel 6.0
+composer require laravel/ui "^1.0" --dev
+
+//membuat policy beserta yang mengarah ke suatu model
+$ php artisan make:policy ArticlePolicy --model="Article"
+
+//number increment pagination
+ <?php $count = 1;
+    $skipped = ($articles->currentPage() * $articles->perPage()) - $articles->perPage()+1; ?>
+
+
+//fungsi php menampilkan break line (inputan textarea)
+nl2br();
+
+//use namespace auth
+use Illuminate\Support\Facades\Auth;
+use Auth;
+
+//use namespace request
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request;
+
+//buat auth
+composer require laravel/ui "^1.0" --dev
+php artisan ui:auth
+
+
+//check apakah sedang login
+Auth::check
+
+
+// make policy artisan
+php artisan make:policy --model=Artikel;
+
+
+// relasi one to many inverse
+
+ARTIKEL
+-------
+*id
+ judul
+ isi
+ user_id
+
+USERS
+------
+*id
+ nama
+ alamat
+ no_telp
+
+
+public function user(){
+$this->belongsTo('\App\Users','user_id');
+}
+
+
+//cek session flash data apakah ada
+Session::has('status')
+
+//ambil message session flash data
+Session::get('status')
+
+//Buat auth laravel 7
+php artisan ui bootstrap --auth
+
+//Buat Seed
+php artisan make:seed
+
+//Melakukan seed sesuai dengan class yang kita pilih
+php artisan db:seed --class=CategoriesTableSeeder
+
+//unique:table,column,except,idColumn
+unique
+
+//membuat duplicate atau link dari storage folder ke public folder
+php artisan storage:link
+
+//command auth bootstrap
+php artisan ui bootstrap --auth
+lalu npm install dan npm run dev
+
+//error composer memory
+COMPOSER_MEMORY_LIMIT=-1 composer require --dev livewire/livewire:^1.0
+
+
+//set verifikasi email
+di model user beri implements MustVerifyEmail di class nya
+set env  MAIL_USERNAME dan MAIL_PASSWORD
+di web.php set Auth::routes(['verify'=>true]);
+
+//middleware supaya halaman bisa diakses jika user suda verifikasi email
+middleware('verified');
+	

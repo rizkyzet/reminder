@@ -1,0 +1,75 @@
+
+
+melihat status apakah file sudah di staged area
+atau belum
+$ git status
+
+
+membuat file berada di staged area
+$ git add (file)
+
+melihat history commit
+$ git log
+
+melihat history commit 3 waktu terakhir
+$ git log -3
+
+melihat histoy commit berdasarkan file yang kita
+cari
+$ git log -- (nama file)
+
+melihat history commit 3 waktu terakhir beradasarkan
+file yang kita cari
+$ git log -3 -- (nama file)
+
+commit
+$ git commit -m "(message)"
+
+mengembalikan file ke keadaan semula berdasarkan
+commit
+$ git checkout (hash 5 digit) -- (nama file)
+
+melihat grafik commit
+git log --all --decorate --oneline --graph
+
+melihat branch
+$ git branch
+
+membuat branch
+$ git branch (nama_branch)
+
+pindah branch
+$ git checkout (nama_branch)
+
+membuat alias grafik commit
+$ alias graph="git log --all --decorate --oneline --graph"
+
+remote git dari internet
+$ git clone (link)
+
+push commit
+$ git push
+
+lihat username email git
+$ git config --list
+
+merubah username dan email
+$ git config --global user.name "(username)"
+$ git config --global user.email "(email)"
+
+mengecek repo yang ada di remote sudah 
+sampai mana commit nya
+$ git fetch
+
+ambil commit
+$ git pull
+
+push
+$ git push
+$ git push -u origin master
+
+hapus remote branch
+$ git push origin --delete (nama_branch)
+
+status remote
+$ git remote -v
