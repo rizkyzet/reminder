@@ -1,0 +1,11 @@
+//Membuat package dependency di dalam aplikasi
+npm init
+
+//Install modules atau package
+npm install (nama package)
+
+//Uninstall modules atau package
+npm uninstall (nama package)
+
+//
+npm build
