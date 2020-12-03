@@ -110,3 +110,6 @@ di web.php set Auth::routes(['verify'=>true]);
 //middleware supaya halaman bisa diakses jika user suda verifikasi email
 middleware('verified');
 	
+//gabungin file js atau css menjadi 1 lewat laravel mix
+buka file webpack.mix.js lalu masukan code untuk menggabungkan beberapa asset
+buka terminal jalankan npm run production untuk versi minify
